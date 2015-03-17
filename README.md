@@ -1,4 +1,4 @@
-# Automation: The Must Have Trend of 2015
+# Automation: The Must-Have Trend of 2015
 
 So you want to ship software fast? AND you want some confidence that what you are shipping is high quality? Then you need to start doing automated testing, NOW; no excuses. Seriously, what are you waiting for?
 
