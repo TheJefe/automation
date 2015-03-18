@@ -6,7 +6,7 @@ Automation is cheap, fast, repeatable and accurate-- not to mention way more fun
 
 In this talk Jeff Koenig will discuss the advantages of automated tests, some basics about what automated tests should be, and what they should NOT be. He'll also dive into why and how automation and continuous integration should be part of your organization's culture.
 
-#### [View Slides](http://el-jefe-.github.io/automation)
+#### [View Slides](http://TheJefe.github.io/automation)
 
 ## Presentation Frameworks is [Reveal.js](https://github.com/hakimel/reveal.js)
 
@@ -20,7 +20,7 @@ Some reveal.js features, like external Markdown and speaker notes, require that 
 
 4. Clone the repository
    ```sh
-   $ git clone https://github.com/el-jefe-/automation.git
+   $ git clone https://github.com/TheJefe/automation.git
    ```
 
 5. Navigate to the reveal.js folder
