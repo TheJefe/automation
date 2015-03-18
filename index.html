@@ -44,30 +44,43 @@
           <h1>Automation</h1>
           <h3>The must have trend of 2015</h3>
           <p>
-            <small>These Slides: <a href="http://TheJefe.github.io/automation/">TheJefe.github.io/automation/</a></small>
             </br>
-            <small>Created by <a href="http://github.com/TheJefe">Jeff Koenig</a>
-              / <a href="http://twitter.com/jeffkoenig">@JeffKoenig</a></small>
+            <small>
+              These Slides: <a href="http://TheJefe.github.io/automation/">TheJefe.github.io/automation/</a>
+              </br>
+              Created by <a href="http://github.com/TheJefe">Jeff Koenig</a>
+              </br>
+              Twitter: <a href="http://twitter.com/jeffkoenig">@JeffKoenig</a>
+              </br>
+              Github: <a href="http://github.com/TheJefe">TheJefe</a>
+            </small>
           </p>
         </section>
 
         <section>
+          <h1>What is Automation?</h1>
+          <aside class="notes">
+            Efficiency and Effectiveness across the life cycle of software
+          </aside>
+        </section>
+
+        <section>
           <section>
-            <h1>What is Automation?</h1>
+            <h1>What can automation do?</h1>
           </section>
 
           <section>
-            <h2>Building</h2>
+            <h2>Build</h2>
             <img src="media/compiling.png"/>
           </section>
 
           <section>
-            <h2>Testing</h2>
+            <h2>Test</h2>
             <img src="media/manualTesting.gif"/>
           </section>
 
           <section>
-            <h1>Deploying</h1>
+            <h1>Deploy</h1>
             <img src="media/shipIt.gif"/>
           </section>
 
@@ -75,16 +88,6 @@
             <h2>Fun</h2>
             <img src="media/buildFailure.gif"/>
           </section>
-
-          <section>
-            <h2>Automatically!!!</h2>
-            <aside class="notes">
-              -Automatically based on your teams workflow.
-              <br>
-              -Automate deployments to your staging environments.
-            </aside>
-          </section>
-
         </section>
 
         <section>
@@ -93,6 +96,8 @@
             <p class="fragment">Because we want to ship code often.</p>
             <aside class="notes">
               Shipping code fast takes confidence in your changes
+              </br>
+              Can't wait weeks for manual regression tests to find out you did it all wrong
             </aside>
           </section>
 
@@ -120,13 +125,19 @@
             <h3>Why you need automation?</h3>
             <p>It frees up your team to do more interesting things.</p>
           </section>
+
+          <section>
+            <h3>Effective and Efficent</h3>
+            <p class="fragment">configure it be part of your workflow</p>
+            <p class="fragment">automatically deploy your staging environment</p>
+          </section>
         </section>
 
         <section>
           <section>
-            <h1>How to get started</h1>
+            <h2>How to get started</h2>
             <aside class="notes">
-              large up front cost
+              large up front cost, but probably not as much as a couple of your regression runs
             </aside>
           </section>
 
@@ -138,9 +149,12 @@
               <li>Jasmine</li>
               <li>Cucumber</li>
               <li>JUnit</li>
+              <li><s>Selenium</s></li>
             </ul>
             <aside class="notes">
               Do the research and pick the framework right for you
+              </br>
+              Selenium is slow, there are faster headless drivers
             </aside>
           </section>
 
@@ -157,17 +171,35 @@
             <h3>Find your projects weak points</h3>
             <p>Write some automated tests to expose those issues</p>
           </section>
+        </section>
 
+        <section>
           <section>
             <img src='media/y_u_no_run_test.jpg' />
           </section>
 
           <section>
-            <h3>Get Continuous Integration</h3>
+            <h3>
+              The Solution:
+              </br>
+              Continuous Integration
+            </h3>
+          </section>
+
+          <section>
+            <p><font size="+15">What.is.CI?</font></p>
+            <p class="fragment">Automated tasks that fit to your workflow</p>
+            <aside class="notes">
+              automating your build/test processs to occur automatically
+            </aside>
+          </section>
+
+          <section>
+            <h3>CI Options</h3>
             <ul>
               <li>
-                <a href="http://jenkins-ci.org/">Jenkins CI</a> /
-                <a href="https://www.cloudbees.com/">Cloudbees</a>
+              <a href="http://jenkins-ci.org/">Jenkins CI</a> /
+              <a href="https://www.cloudbees.com/">Cloudbees</a>
               </li>
               <li><a href="https://travis-ci.org">Travis CI</a></li>
               <li><a href="https://drone.io/">Drone.io</a></li>
@@ -177,6 +209,38 @@
             <aside class="notes">
               Do the research and pick the framework right for you
             </aside>
+          </section>
+
+          <section>
+            <p>
+            Trigger Build/Tests for
+            </br>
+            Feature
+            </br>
+            and Release Candidate
+            </br>
+            branches
+            </p>
+          </section>
+
+          <section>
+            <h3>Create a Build Pipeline</h3>
+            <aside class="notes">
+              Chain together tests to deployments
+            </aside>
+          </section>
+
+          <section>
+            <h3>Continuous Deployment</h3>
+            <p class="fragment">When code passes all tests, a production deployment is triggered</p>
+            <aside class="notes">
+              Nirvana of the automation
+            </aside>
+          </section>
+
+          <section>
+            <p>Welcome to Automation Nirvana</p>
+            <img src="media/buddhanirvana.jpg"/>
           </section>
         </section>
 
@@ -203,11 +267,11 @@
             <h4>Accessibility</h4>
             <aside class="notes">
               Tests take too long
-              <br>
+              </br>
               Its a pain to run them locally
-              <br>
+              </br>
               I forget to run them
-              <br>
+              </br>
               It works on my machine
             </aside>
           </section>
@@ -224,9 +288,9 @@
           <section>
             <h3>Agree on Ground Rules</h3>
             <ol>
-              <li><p class="fragment">Code with failing tests can NOT be MERGED</p></li>
-              <li><p class="fragment">Code with failing tests can NOT be DEPLOYED</p></li>
-              <li><p class="fragment">New features can not be merged without tests</p></li>
+              <li><p class="fragment">Code with failing tests <b>SHALL NOT</b> be MERGED</p></li>
+              <li><p class="fragment">Code with failing tests <b>SHALL NOT</b> be DEPLOYED</p></li>
+              <li><p class="fragment">New features <b>SHALL NOT</b> be merged without tests</p></li>
             </ol>
           </section>
 
@@ -253,6 +317,23 @@
               any other code
             </aside>
           </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>ChatOps</h1>
+          </section>
+
+          <section>
+            <p><font size="+10">What.is.ChatOps?</font></p>
+            <p class="fragment">Chat bot that hears and responds to specific things in chat</p>
+            <img class="fragment" src="media/mathbotAww.png"/>
+          </section>
+
+          <section>
+            <h3>Hubot</h3>
+            <img src="media/hubot.svg"/>
+          </section>
 
           <section>
             <h1>ChatOps</h1>
@@ -261,7 +342,7 @@
           </section>
 
           <section>
-            <h1>ChatOps</h1>
+            <h3>Advantage of ChatOps</h3>
             <img src="media/chatOptsDeployStatus.png"/>
             <small>used with permission from Andre</small>
           </section>
